@@ -1,0 +1,88 @@
+{
+  "agents": [
+    {
+      "id": "agente_setup",
+      "persona": "Engenheiro de Setup",
+      "tools": ["terminal", "shell"],
+      "format": ["scripts", "Makefile"],
+      "version": "1.0.0"
+    },
+    {
+      "id": "agente_arquitetura",
+      "persona": "Arquiteto de Sistemas",
+      "tools": ["mermaid.js", "LLM"],
+      "format": ["diagrama", "decisao"],
+      "version": "1.0.0"
+    },
+    {
+      "id": "agente_frontend",
+      "persona": "Dev Frontend Sênior",
+      "tools": ["React", "Jest"],
+      "format": ["tsx", "hooks"],
+      "version": "1.0.0"
+    },
+    {
+      "id": "agente_backend",
+      "persona": "Dev Backend Sênior",
+      "tools": [".NET", "Node.js", "Redis"],
+      "format": ["controller", "service"],
+      "version": "1.0.0"
+    },
+    {
+      "id": "agente_gateway",
+      "persona": "Especialista API Gateway",
+      "tools": ["gRPC", "Envoy"],
+      "format": ["proto", "config"],
+      "version": "1.0.0"
+    },
+    {
+      "id": "agente_dados",
+      "persona": "Eng. de Dados",
+      "tools": ["Prisma", "PostgreSQL"],
+      "format": ["schema", "migration"],
+      "version": "1.0.0"
+    },
+    {
+      "id": "agente_mensageria",
+      "persona": "Arquiteto de Mensageria",
+      "tools": ["Kafka", "Redis Streams"],
+      "format": ["event", "topic"],
+      "version": "1.0.0"
+    },
+    {
+      "id": "agente_devops",
+      "persona": "Eng. DevOps",
+      "tools": ["Docker", "GitHub Actions"],
+      "format": ["ci.yml", "Dockerfile"],
+      "version": "1.0.0"
+    },
+    {
+      "id": "agente_devsecops",
+      "persona": "Especialista DevSecOps",
+      "tools": ["Vault", "Keycloak"],
+      "format": ["vault.hcl", "pipeline"],
+      "version": "1.0.0"
+    },
+    {
+      "id": "agente_testes",
+      "persona": "Eng. de Testes",
+      "tools": ["Jest", "Playwright"],
+      "format": ["spec", "test"],
+      "version": "1.0.0"
+    },
+    {
+      "id": "agente_segurança",
+      "persona": "Especialista Segurança",
+      "tools": ["JWT", "OAuth2"],
+      "format": ["auth", "headers"],
+      "version": "1.0.0"
+    },
+    {
+      "id": "agente_llm",
+      "persona": "Arquiteto IA Gen",
+      "tools": ["LangChain", "OpenAI"],
+      "format": ["retriever", "prompt"],
+      "version": "1.0.0"
+    }
+  ]
+}

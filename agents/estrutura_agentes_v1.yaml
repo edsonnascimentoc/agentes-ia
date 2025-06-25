@@ -1,0 +1,72 @@
+agents:
+  - id: agente_setup
+    persona: Engenheiro de Setup
+    version: 1.0.0
+    tools: [terminal, shell]
+    format: [scripts, Makefile]
+
+  - id: agente_arquitetura
+    persona: Arquiteto de Sistemas
+    version: 1.0.0
+    tools: [mermaid.js, LLM]
+    format: [diagrama, decisao]
+
+  - id: agente_frontend
+    persona: Dev Frontend Sênior
+    version: 1.0.0
+    tools: [React, Jest]
+    format: [tsx, hooks]
+
+  - id: agente_backend
+    persona: Dev Backend Sênior
+    version: 1.0.0
+    tools: [.NET, Node.js, Redis]
+    format: [controller, service]
+
+  - id: agente_gateway
+    persona: Especialista API Gateway
+    version: 1.0.0
+    tools: [gRPC, Envoy]
+    format: [proto, config]
+
+  - id: agente_dados
+    persona: Eng. de Dados
+    version: 1.0.0
+    tools: [Prisma, PostgreSQL]
+    format: [schema, migration]
+
+  - id: agente_mensageria
+    persona: Arquiteto de Mensageria
+    version: 1.0.0
+    tools: [Kafka, Redis Streams]
+    format: [event, topic]
+
+  - id: agente_devops
+    persona: Eng. DevOps
+    version: 1.0.0
+    tools: [Docker, GitHub Actions]
+    format: [ci.yml, Dockerfile]
+
+  - id: agente_devsecops
+    persona: Especialista DevSecOps
+    version: 1.0.0
+    tools: [Vault, Keycloak]
+    format: [vault.hcl, pipeline]
+
+  - id: agente_testes
+    persona: Eng. de Testes
+    version: 1.0.0
+    tools: [Jest, Playwright]
+    format: [spec, test]
+
+  - id: agente_segurança
+    persona: Especialista Segurança
+    version: 1.0.0
+    tools: [JWT, OAuth2]
+    format: [auth, headers]
+
+  - id: agente_llm
+    persona: Arquiteto IA Gen
+    version: 1.0.0
+    tools: [LangChain, OpenAI]
+    format: [retriever, prompt]
