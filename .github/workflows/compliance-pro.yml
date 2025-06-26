@@ -1,0 +1,41 @@
+name: 🛡️ Compliance Corporativo — Segurança e Qualidade
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  segurança-e-privacidade:
+    name: 🔐 Validação de LGPD, tokens e segredos
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: 📥 Checkout do código
+        uses: actions/checkout@v3
+
+      - name: ⚙️ Instalar dependências
+        run: |
+          python -m pip install --upgrade pip
+          pip install jsonschema pytest
+
+      - name: 🧪 Executar validação de segurança
+        run: |
+          echo "Validando estrutura de agentes (schema)..."
+          pytest tests/test_agentes.py
+
+          echo "Verificando segredos e dados sensíveis..."
+          python compliance/valida_compliance.py agents/estrutura_agentes_v1.json
+
+      - name: ✅ Conformidade aprovada
+        if: success()
+        run: echo "Pipeline passou com sucesso. Nenhum dado sensível ou violação encontrada."
+
+      - name: ❌ Falha de segurança
+        if: failure()
+        run: echo "⚠️ Compliance falhou. Corrija os problemas antes de prosseguir."

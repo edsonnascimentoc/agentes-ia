@@ -1,0 +1,15 @@
+rules:
+  - id: secrets-in-code
+    description: "Evite tokens, senhas ou segredos diretamente no código"
+    pattern: "(AKIA|AIza|ghp_|eyJ[A-Za-z0-9_\\-]+)"
+    severity: high
+
+  - id: personal-data-exposure
+    description: "Dados pessoais (CPF, e-mail, telefone) devem ser anonimizados"
+    regex: "\\b\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}\\b|\\b\\w+@\\w+\\.\\w+\\b"
+    severity: critical
+
+  - id: weak-auth
+    description: "Evitar autenticação via query string ou headers expostos"
+    keywords: ["Authorization:", "apikey=", "access_token="]
+    severity: medium

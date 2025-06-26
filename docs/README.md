@@ -68,3 +68,17 @@ Criação de repositório real com exemplos aplicáveis
 
 Geração de agentes autoexplicativos (RAG, embeddings, etc.)
 
+## 🔐 Segurança e Conformidade (Etapa 6)
+
+Este projeto agora inclui mecanismos automáticos para:
+- Detecção de **segredos expostos**
+- Identificação de **dados pessoais expostos (CPF, e‑mail)**
+
+---
+
+### ✅ Como usar
+
+```bash
+python compliance/valida_compliance.py agents/estrutura_agentes_v1.json
+
+
