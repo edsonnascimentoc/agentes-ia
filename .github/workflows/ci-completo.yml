@@ -1,0 +1,30 @@
+name: ✅ CI Completo — Estrutura, Segurança e Simulação
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main, dev]
+
+jobs:
+  valida-agentes:
+    name: 🔍 Validar Estrutura e Segurança
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v3
+
+      - name: 🐍 Instalar Python e dependências
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest jsonschema
+
+      - name: ✅ Validar estrutura (JSON Schema)
+        run: pytest tests/test_agentes.py
+
+      - name: 🛡️ Validar segurança (tokens/dados sensíveis)
+        run: python compliance/valida_compliance_lote.py
+
+      - name: 🎯 Simular execução de agentes
+        run: pytest tests/test_simulador_agentes.py

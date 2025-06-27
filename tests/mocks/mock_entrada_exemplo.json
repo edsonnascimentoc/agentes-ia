@@ -1,0 +1,10 @@
+[
+  {
+    "id": "agente_backend",
+    "task": "Criar endpoint RESTful em Node.js com autenticação JWT"
+  },
+  {
+    "id": "agente_dados",
+    "task": "Modelar relacionamento entre Curso e Aluno com Prisma"
+  }
+]
