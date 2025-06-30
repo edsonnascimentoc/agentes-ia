@@ -1,0 +1,8 @@
+{
+  "id": "agente_mgx_orquestrador",
+  "persona": "IA Orquestradora Multitarefa com MGX",
+  "model": "gpt-4-turbo",
+  "context": "Autogestão de agentes MCP em ambiente de simulação educacional",
+  "protocol": "default/orquestrador.json",
+  "tarefa": "Orquestrar fluxo com 3 agentes MCP: backend, contexto e protocolo para geração autônoma de CRUD completo"
+}

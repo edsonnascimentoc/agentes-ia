@@ -1,0 +1,88 @@
+{
+  "educação financeira": {
+    "tipo": "texto",
+    "conteudo": {
+      "aluno": "Como montar um orçamento pessoal e entender juros simples.",
+      "professor": "Material didático para ensinar finanças básicas com exemplos práticos.",
+      "coordenador_pedagogico": "Objetivos de aprendizagem para desenvolvimento de competências financeiras.",
+      "coordenador_curso": "Alinhamento da disciplina com BNCC e integração interdisciplinar.",
+      "gestor_educacional": "Indicadores de impacto da educação financeira nas trilhas formativas.",
+      "dev": "Simulação de orçamento e fluxo de caixa com frontend em React."
+    }
+  },
+  "backend": {
+    "tipo": "texto",
+    "conteudo": {
+      "aluno": "O que é backend e para que serve em um sistema educacional.",
+      "professor": "Exemplo de endpoint com validação de matrícula.",
+      "coordenador_pedagogico": "Requisitos técnicos para software educacional inclusivo.",
+      "coordenador_curso": "Aderência do backend a currículos de tecnologia.",
+      "gestor_educacional": "Sustentação técnica e SLA de aplicações educacionais.",
+      "dev": "Implementação com Clean Architecture, testes e mensageria assíncrona."
+    }
+  },
+  "programação": {
+    "tipo": "arquivo",
+    "formato": "pdf",
+    "local": "context/docs/programacao_fundamentos.pdf",
+    "conteudo": {
+      "aluno": null,
+      "professor": null,
+      "coordenador_pedagogico": null,
+      "coordenador_curso": null,
+      "gestor_educacional": null,
+      "dev": null
+    }
+  },
+  "softskills": {
+    "tipo": "web",
+    "link": "https://drive.google.com/file/d/1xYzABC123xyz/view?usp=sharing",
+    "conteudo": {
+      "aluno": null,
+      "professor": null,
+      "coordenador_pedagogico": null,
+      "coordenador_curso": null,
+      "gestor_educacional": null,
+      "dev": null
+    }
+  },
+  "ciência de dados": {
+    "tipo": "arquivo",
+    "formato": "docx",
+    "local": "context/docs/ciencia_dados_basico.docx",
+    "conteudo": {
+      "aluno": null,
+      "professor": null,
+      "coordenador_pedagogico": null,
+      "coordenador_curso": null,
+      "gestor_educacional": null,
+      "dev": null
+    }
+  },
+  "matemática": {
+    "tipo": "arquivo",
+    "formato": "xlsx",
+    "local": "context/docs/tabelas_matematicas.xlsx",
+    "conteudo": {
+      "aluno": null,
+      "professor": null,
+      "coordenador_pedagogico": null,
+      "coordenador_curso": null,
+      "gestor_educacional": null,
+      "dev": null
+    }
+  },
+  "devops": {
+    "tipo": "web",
+    "link": "https://github.com/example-org/devops-manual/blob/main/README.md",
+    "conteudo": {
+      "aluno": null,
+      "professor": null,
+      "coordenador_pedagogico": null,
+      "coordenador_curso": null,
+      "gestor_educacional": null,
+      "dev": null
+    }
+  }
+}
+

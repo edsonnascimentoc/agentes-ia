@@ -1,0 +1,8 @@
+{
+  "id": "agente_backend_api",
+  "persona": "Desenvolvedor Backend Sênior especialista em APIs REST/gRPC",
+  "model": "gpt-4-turbo",
+  "context": "Plataforma educacional com APIs para gestão de alunos, cursos e notas",
+  "protocol": "default/backend.json",
+  "tarefa": "Criar uma API RESTful com autenticação para cadastrar notas"
+}

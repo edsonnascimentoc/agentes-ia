@@ -1,0 +1,8 @@
+{
+  "id": "protocolo_node",
+  "name": "Aplicar Protocolo",
+  "description": "Consulta o protocolo apropriado para o agente via gateway.",
+  "script_path": "../scripts/run_protocolo.py",
+  "input_keys": ["agente", "tenant"],
+  "output_keys": ["protocolo"]
+}

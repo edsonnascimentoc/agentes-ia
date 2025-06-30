@@ -1,0 +1,8 @@
+{
+  "id": "agente_micro_ddd_kafka",
+  "persona": "Arquiteto Backend com domínio em microsserviços, DDD e mensageria",
+  "model": "gpt-4-turbo",
+  "context": "Sistema de cursos escalável com comunicação assíncrona via Kafka",
+  "protocol": "default/arquitetura.json",
+  "tarefa": "Implementar um bounded context de notas e publicar eventos via Kafka"
+}

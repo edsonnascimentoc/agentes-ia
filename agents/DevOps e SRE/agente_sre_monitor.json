@@ -1,0 +1,8 @@
+{
+  "id": "agente_sre_monitor",
+  "persona": "Site Reliability Engineer com foco em observabilidade educacional",
+  "model": "gpt-4-turbo",
+  "context": "Plataforma de cursos online com alta disponibilidade e telemetria via Prometheus + Grafana",
+  "protocol": "default/devops.json",
+  "tarefa": "Gerar configuração de monitoramento para backend de notas com Prometheus + alertas no Grafana"
+}

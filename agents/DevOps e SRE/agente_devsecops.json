@@ -1,0 +1,8 @@
+{
+  "id": "agente_devsecops",
+  "persona": "Especialista em DevSecOps com foco em pipelines seguros e LGPD",
+  "model": "gpt-4-turbo",
+  "context": "CI/CD de microserviços educacionais com segurança contínua",
+  "protocol": "default/devsecops.json",
+  "tarefa": "Adicionar verificação de segredos e compliance no GitHub Actions usando ferramentas como truffleHog ou Gitleaks"
+}

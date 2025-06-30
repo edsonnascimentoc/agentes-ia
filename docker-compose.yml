@@ -1,0 +1,43 @@
+version: '3.8'
+services:
+  llm-server:
+    image: ghcr.io/ollama/ollama:latest
+    container_name: llm-server
+    ports:
+      - "11434:11434"
+    volumes:
+      - ./models:/models
+    command: ["llama", "serve", "--model", "llama3"]
+
+  context-engine:
+    image: python:3.10-slim
+    container_name: context-engine
+    volumes:
+      - ./context:/app/context
+    working_dir: /app
+    command: ["uvicorn", "context.api:app", "--host", "0.0.0.0", "--port", "8000"]
+    ports:
+      - "8000:8000"
+
+  protocol-gateway:
+    image: ghcr.io/langgraph/langgraph:latest
+    container_name: protocol-gateway
+    environment:
+      - PORT=3000
+    ports:
+      - "3000:3000"
+
+  agente_backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.agent_backend
+    container_name: agente-backend
+    environment:
+      - LLM_ENDPOINT=http://llm-server:11434
+      - CONTEXT_ENDPOINT=http://context-engine:8000
+      - PROTOCOL_ENDPOINT=http://protocol-gateway:3000
+      - AGENT_ID=agente_backend
+    depends_on:
+      - llm-server
+      - context-engine
+      - protocol-gateway

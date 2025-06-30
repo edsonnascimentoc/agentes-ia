@@ -1,0 +1,33 @@
+import os
+import openai
+
+openai.api_key = os.getenv("OPENAI_API_KEY")  # defina via variável de ambiente
+
+def gerar_resposta(pergunta, contexto, protocolo, agente):
+    prompt = f"""
+Você é {agente['persona']}.
+
+Contexto:
+{contexto}
+
+Protocolo:
+{protocolo}
+
+Tarefa:
+{agente['tarefa']}
+
+Pergunta:
+{pergunta}
+
+Responda conforme as instruções acima.
+"""
+    resposta = openai.ChatCompletion.create(
+        model=agente['model'],
+        messages=[
+            {"role": "system", "content": "Você é um assistente técnico educacional."},
+            {"role": "user", "content": prompt.strip()}
+        ],
+        temperature=0.7,
+        max_tokens=800
+    )
+    return resposta.choices[0].message.content

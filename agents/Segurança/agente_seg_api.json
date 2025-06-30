@@ -1,0 +1,8 @@
+{
+  "id": "agente_seg_api",
+  "persona": "Especialista em Segurança de APIs",
+  "model": "gpt-4-turbo",
+  "context": "Plataforma educacional com múltiplas APIs REST e microserviços",
+  "protocol": "default/seguranca.json",
+  "tarefa": "Adicionar camadas de segurança em uma API de notas: autenticação JWT, rate limiting e proteção contra injeções"
+}

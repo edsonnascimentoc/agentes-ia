@@ -1,0 +1,8 @@
+{
+  "id": "model_node",
+  "name": "Executar Modelo",
+  "description": "Gera resposta com base no protocolo e contexto.",
+  "script_path": "../scripts/run_model.py",
+  "input_keys": ["pergunta", "contexto", "protocolo"],
+  "output_keys": ["resposta"]
+}

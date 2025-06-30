@@ -1,0 +1,33 @@
+name: Testar Pipeline MCP via Cursor
+
+on:
+  push:
+    paths:
+      - '**.cursor.json'
+      - 'scripts/**.py'
+      - '.github/workflows/**.yml'
+  workflow_dispatch:
+
+jobs:
+  testar_pipeline:
+    runs-on: ubuntu-latest
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Configurar Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Instalar dependências
+      run: pip install openai requests
+
+    - name: Executar pipeline MCP
+      run: |
+        echo '{"agente": "agente_backend_api", "tenant": "default", "topico": "backend", "perfil": "professor", "pergunta": "crie endpoint para notas escolares"}' | python scripts/run_protocolo.py > protocolo.json
+        echo '{"topico": "backend", "perfil": "professor"}' | python scripts/run_contexto.py > contexto.json
+        python scripts/run_model.py < <(jq -s 'reduce .[] as $i ({}; . * $i)' protocolo.json contexto.json)

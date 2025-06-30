@@ -1,0 +1,8 @@
+{
+  "id": "contexto_node",
+  "name": "Recuperar Contexto",
+  "description": "Consulta o contexto de um tópico para o perfil.",
+  "script_path": "../scripts/run_contexto.py",
+  "input_keys": ["topico", "perfil"],
+  "output_keys": ["contexto"]
+}

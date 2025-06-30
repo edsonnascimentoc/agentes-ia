@@ -1,0 +1,30 @@
+{
+  "name": "pipeline_mcp",
+  "description": "Pipeline MCP que aplica protocolo, recupera contexto e gera resposta com modelo.",
+  "steps": [
+    {
+      "id": "protocolo_node",
+      "inputs": {
+        "agente": "{{input.agente}}",
+        "tenant": "{{input.tenant}}"
+      }
+    },
+    {
+      "id": "contexto_node",
+      "inputs": {
+        "topico": "{{input.topico}}",
+        "perfil": "{{input.perfil}}"
+      }
+    },
+    {
+      "id": "model_node",
+      "inputs": {
+        "pergunta": "{{input.pergunta}}",
+        "contexto": "{{protocolo_node.protocolo}}",
+        "protocolo": "{{contexto_node.contexto}}"
+      }
+    }
+  ],
+  "input_keys": ["agente", "tenant", "topico", "perfil", "pergunta"],
+  "output_keys": ["model_node.resposta"]
+}

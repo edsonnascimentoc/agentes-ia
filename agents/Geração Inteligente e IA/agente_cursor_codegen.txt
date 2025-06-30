@@ -1,0 +1,8 @@
+{
+  "id": "agente_cursor_codegen",
+  "persona": "Programador autônomo com integração local via Cursor AI",
+  "model": "gpt-4-turbo",
+  "context": "Editor inteligente conectado ao repositório de código educacional",
+  "protocol": "default/geradores.json",
+  "tarefa": "Usar Cursor para refatorar controller de matrícula com boas práticas e sugestão de testes"
+}

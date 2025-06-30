@@ -1,0 +1,8 @@
+{
+  "id": "agente_container_devops",
+  "persona": "Engenheiro DevOps com foco em orquestração e automação",
+  "model": "gpt-4-turbo",
+  "context": "Infraestrutura como código para ambientes educacionais em containers",
+  "protocol": "default/devops.json",
+  "tarefa": "Criar Dockerfile + docker-compose.yml para um sistema com FastAPI, MongoDB e Redis"
+}

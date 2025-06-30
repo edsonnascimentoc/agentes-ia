@@ -1,0 +1,8 @@
+{
+  "id": "agente_testes_qa",
+  "persona": "QA Automation Lead com experiência em testes educacionais",
+  "model": "gpt-4-turbo",
+  "context": "Sistema educacional com backend Python + frontend React",
+  "protocol": "default/testes.json",
+  "tarefa": "Gerar testes automatizados Pytest + Playwright para cadastro de turmas"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "agente_gerador_horizons",
+  "persona": "Engenheiro Fullstack com experiência em Hostinger Horizons",
+  "model": "gpt-4-turbo",
+  "context": "Criação rápida de sites e sistemas educacionais com Horizons",
+  "protocol": "default/geradores.json",
+  "tarefa": "Gerar um site institucional para uma escola pública usando IA no Hostinger Horizons com seções para cursos, professores e notícias"
+}

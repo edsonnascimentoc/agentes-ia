@@ -1,0 +1,6 @@
+FROM python:3.10-slim
+WORKDIR /app
+COPY cli/cli_agentes.py /app/
+COPY agents/estrutura_agentes_v1.json /app/
+RUN pip install requests
+ENTRYPOINT ["python", "cli_agentes.py", "--arquivo", "estrutura_agentes_v1.json", "create"]
